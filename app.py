@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import requests
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='frontend', template_folder='frontend')
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
